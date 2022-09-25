@@ -13,10 +13,12 @@ public class PersonRepository {
     @PersistenceContext
     private EntityManager entityManager;
 
-
     public List<Person> getPersonByCity(String city) {
-        return entityManager.createQuery("select p from Person p where p.cityOfLiving = :city order by p.cityOfLiving", Person.class)
-                .setParameter("city",city)
+        final String sql = "select p from Person p where lower(p.cityOfLiving) = lower(:city)";
+        List<Person> resultList = entityManager.createQuery(sql, Person.class)
+                .setParameter("city", city)
                 .getResultList();
+        resultList.forEach(System.out::println);
+        return resultList;
     }
 }
