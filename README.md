@@ -1,5 +1,10 @@
 # Задача DAO слой c Hibernate
 
+1. Create docker container postgres:
+``` docker run --name postgres -d -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres postgres:14```
+2. create schema in possgres sql:
+```create schema if not exists netology;```
+
 ## Описание
 Попрактикуемся в работе с Hibernate через Spring, попутно закрепляя уже пройденные темы. Вам надо написать приложение для работы с БД, используя средства Spring по конфигурации и работе с Hibernate, адаптировав таблицы из задания [Таблица пользователей](../../sql-basic/task/README.md)
 

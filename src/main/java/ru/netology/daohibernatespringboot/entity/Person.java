@@ -10,28 +10,23 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table
+@Table(schema="netology")
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "first_name", nullable = false)
     private String name;
 
-    @Column(name = "surname", nullable = false)
+    @Column(name = "last_name", nullable = false)
     private String surname;
 
-    @Column(name = "age", nullable = false)
-   // @Min(0)
     private int age;
 
-    @Column(name = "phone_number", nullable = false)
-    //    @Column(columnDefinition = "varchar(50) default 'Номер не указан'")
     private String phoneNumber;
 
-    @Column(name = "city_of_living", nullable = false)
+    @Column(nullable = false)
     private String cityOfLiving;
-
 }
