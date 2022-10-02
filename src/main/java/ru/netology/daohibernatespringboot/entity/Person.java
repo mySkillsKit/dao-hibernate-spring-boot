@@ -1,6 +1,7 @@
 package ru.netology.daohibernatespringboot.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -27,6 +28,6 @@ public class Person {
 
     private String phoneNumber;
 
-    @Column(nullable = false)
-    private String cityOfLiving;
+    @Column(name = "city_of_living", nullable = false)
+    private String city;
 }
