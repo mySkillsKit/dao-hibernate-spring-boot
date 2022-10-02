@@ -30,4 +30,5 @@ public class Person {
 
     @Column(name = "city_of_living", nullable = false)
     private String city;
+
 }

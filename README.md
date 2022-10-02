@@ -62,7 +62,6 @@ curl --location --request PUT 'http://localhost:8080/persons/update/3' \
 # Задача DAO слой c Hibernate
 
 
-
 ## Описание
 Попрактикуемся в работе с Hibernate через Spring, попутно закрепляя уже пройденные темы. Вам надо написать приложение для работы с БД, используя средства Spring по конфигурации и работе с Hibernate, адаптировав таблицы из задания [Таблица пользователей](../../sql-basic/task/README.md)
 
